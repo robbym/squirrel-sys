@@ -9,7 +9,6 @@ fn main() {
 
     println!("cargo:rustc-link-search=native={}/lib", dst.display());
     println!("cargo:rustc-link-lib=static=squirrel_static");
-    println!("cargo:rustc-flags=-l dylib=stdc++");
 
     let bindings = bindgen::Builder::default()
         .no_unstable_rust()
