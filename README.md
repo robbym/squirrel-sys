@@ -1,9 +1,8 @@
 # squirrel-sys
 
-## Building
+## Getting Started
+Add the following dependency to your Cargo manifest...
 ```
-git clone https://github.com/robbym/squirrel-sys.git
-git submodule init
-git submodule update
-cargo build
+[dependencies]
+squirrel-sys = "0.1.0"
 ```
