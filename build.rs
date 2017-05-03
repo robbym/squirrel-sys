@@ -1,0 +1,22 @@
+extern crate bindgen;
+extern crate cmake;
+
+use std::env;
+use std::path::PathBuf;
+
+fn main() {
+    let dst = cmake::build("squirrel");
+
+    println!("cargo:rustc-link-search=native={}/lib", dst.display());
+    println!("cargo:rustc-link-lib=static=squirrel_static");
+    println!("cargo:rustc-flags=-l dylib=stdc++");
+
+    let bindings = bindgen::Builder::default()
+        .no_unstable_rust()
+        .header("wrapper.h")
+        .generate()
+        .expect("Unable to generate bindings");
+
+    let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
+    bindings.write_to_file(out_path.join("bindings.rs")).expect("Couldn't write bindings!");
+}
