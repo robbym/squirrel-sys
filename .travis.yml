@@ -8,5 +8,6 @@ matrix:
     - rust: nightly
 
 before_install:
+  - gcc --version
   - sudo apt-get -qq update
-  - sudo apt-get install gcc-5 -y
+  - sudo apt-get install gcc-4.8 -y
