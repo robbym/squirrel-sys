@@ -13,5 +13,5 @@ before_install:
   - sudo apt-add-repository "deb http://apt.llvm.org/precise/ llvm-toolchain-precise-3.9 main"
   - sudo apt-get update -q
   - sudo apt-get install llvm-3.9-dev libclang-3.9-dev clang-3.9 -y
-  - export CC=/usr/bin/clang
-  - export CXX=/usr/bin/clang++
+  - export CC=/usr/bin/clang-3.9
+  - export CXX=/usr/bin/clang++-3.9
