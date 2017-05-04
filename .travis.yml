@@ -8,7 +8,9 @@ matrix:
     - rust: nightly
 
 before_install:
+  - wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+  - sudo apt-add-repository "deb http://apt.llvm.org/precise/ llvm-toolchain-precise-3.9 main"
   - sudo apt-get update -q
   - sudo apt-get install llvm-3.9-dev libclang-3.9-dev clang-3.9 gcc-4.8 g++-4.8 -y
   - export CC=/usr/bin/gcc-4.8
