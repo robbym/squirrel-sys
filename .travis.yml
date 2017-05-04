@@ -12,6 +12,6 @@ before_install:
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
   - sudo apt-add-repository "deb http://apt.llvm.org/precise/ llvm-toolchain-precise-3.9 main"
   - sudo apt-get update -q
-  - sudo apt-get install llvm-3.9-dev libclang-3.9-dev clang-3.9 gcc-4.8 g++-4.8 -y
-  - export CC=/usr/bin/gcc-4.8
-  - export CXX=/usr/bin/g++-4.8
+  - sudo apt-get install llvm-3.9-dev libclang-3.9-dev clang-3.9 -y
+  - export CC=/usr/bin/clang
+  - export CXX=/usr/bin/clang++
