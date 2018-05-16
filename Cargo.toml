@@ -1,6 +1,6 @@
 [package]
 name = "squirrel-sys"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["robbymadruga@gmail.com"]
 description = "FFI bindings to the squirrel language."
 readme = "README.md"
