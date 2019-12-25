@@ -1,6 +1,6 @@
 [package]
 name = "squirrel-sys"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["robbymadruga@gmail.com"]
 description = "FFI bindings to the squirrel language."
 readme = "README.md"
@@ -8,7 +8,8 @@ license = "MIT"
 repository = "https://github.com/robbym/squirrel-sys"
 homepage = "https://github.com/robbym/squirrel-sys"
 build = "build.rs"
+edition = "2018"
 
 [build-dependencies]
-bindgen = "0.23"
-cmake = "0.1"
+bindgen = "0.52.0"
+cmake = "0.1.42"

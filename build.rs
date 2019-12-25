@@ -14,7 +14,6 @@ fn main() {
     }
 
     let bindings = bindgen::Builder::default()
-        .no_unstable_rust()
         .header("wrapper.h")
         .trust_clang_mangling(false)
         .generate()
